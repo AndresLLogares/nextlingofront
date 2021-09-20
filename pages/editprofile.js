@@ -7,7 +7,6 @@ import Storage from "../components/utils/localstorage";
 import { useDispatch, useSelector } from "react-redux";
 import styles from "../styles/edit/edit.module.scss";
 import { Fade } from "react-awesome-reveal";
-import { CLOUDINARY_URL, CLOUDINARY_PRESET } from "../secret/secret";
 import { VectorPen } from "@styled-icons/bootstrap/VectorPen";
 import { Profile } from "@styled-icons/icomoon/Profile";
 import toast, { Toaster } from "react-hot-toast";
@@ -16,7 +15,8 @@ const EditProfile = () => {
   const router = useRouter();
 
   const [username, setUsername] = useState("");
-
+  const CLOUDINARY_PRESET = process.env.CLOUDINARY_PRESET;
+  const CLOUDINARY_URL = process.env.CLOUDINARY_URL;
   let url = "https://nextlingoapp.herokuapp.com/";
 
   const dispatch = useDispatch();
