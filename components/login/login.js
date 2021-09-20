@@ -16,7 +16,7 @@ import axios from "axios";
 const Login = () => {
   const router = useRouter();
   const dispatch = useDispatch();
-  let url = "http://localhost:5000/";
+  let url = "https://nextlingoapp.herokuapp.com/";
   const [user, setUser] = useState({
     email: "",
     password: "",

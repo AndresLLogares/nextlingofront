@@ -24,7 +24,7 @@ const LessonOneTest = () => {
 
   const dispatch = useDispatch();
 
-  let url = "http://localhost:5000/";
+  let url = "https://nextlingoapp.herokuapp.com/";
 
   useEffect(() => {
     const fetchUsers = async () => {

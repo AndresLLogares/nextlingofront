@@ -9,7 +9,7 @@ import toast from "react-hot-toast";
 import axios from "axios";
 
 const SignUp = () => {
-  let url = "http://localhost:5000/";
+  let url = "https://nextlingoapp.herokuapp.com/";
   const [user, setUser] = useState({
     email: "",
     controlPassword: "",

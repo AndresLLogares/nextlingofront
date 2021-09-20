@@ -8,7 +8,7 @@ import { CancelPresentation } from "@styled-icons/material/CancelPresentation";
 import React, { useState } from "react";
 import axios from "axios";
 const PopUp = (props) => {
-  let url = "http://localhost:5000/";
+  let url = "https://nextlingoapp.herokuapp.com/";
   const [user, setUser] = useState({
     password: "",
   });

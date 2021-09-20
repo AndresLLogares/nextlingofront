@@ -10,7 +10,7 @@ import { Toaster } from "react-hot-toast";
 
 const Reset = () => {
   const router = useRouter();
-  let url = "http://localhost:5000/";
+  let url = "https://nextlingoapp.herokuapp.com/";
   const [user, setUser] = useState({
     email: "",
     password: "",

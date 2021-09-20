@@ -17,7 +17,7 @@ const EditProfile = () => {
 
   const [username, setUsername] = useState("");
 
-  let url = "http://localhost:5000/";
+  let url = "https://nextlingoapp.herokuapp.com/";
 
   const dispatch = useDispatch();
 
