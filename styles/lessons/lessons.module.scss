@@ -1,0 +1,120 @@
+$Pink: #f72585;
+$Purple: #7209b7;
+$DarkBlue: #3a0ca3;
+$Blue: #4361ee;
+$LightBlue: #4cc9f0;
+$White: #ffffff;
+$Black: #231b1b;
+$Grey: #faf9f9;
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Roboto:wght@300&display=swap");
+
+.examples {
+  font-family: "Oswald", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 80%;
+  background-color: $Grey;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  border-radius: 10px 10px 10px 10px;
+  border: 0.2rem $Black solid;
+}
+
+.bounce {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.sortTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+.title {
+  font-family: "Oswald", sans-serif;
+  font-size: 4vh;
+  font-weight: bold;
+  color: $Black;
+  margin: 0%;
+  margin-top: 1%;
+  margin-bottom: 2%;
+}
+
+.eachLesson {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 25%;
+  border: 0.2rem $Black solid;
+  background-color: $LightBlue;
+  border-radius: 10px 10px 10px 10px;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  padding: 2%;
+  &:hover {
+    cursor: url(../../images/pointer.png), default;
+    opacity: 0.8;
+  }
+}
+
+.titleLesson {
+  margin: 0%;
+  margin-top: 10%;
+  font-family: "Roboto", sans-serif;
+  font-size: 3vh;
+  font-weight: bold;
+  color: $White;
+}
+
+.eachLessonCompleted {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  width: 80%;
+  border: 0.2rem $Black solid;
+  background-color: $LightBlue;
+  border-radius: 10px 10px 10px 10px;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  padding: 2%;
+  &:hover {
+    cursor: url(../../images/pointer.png), default;
+    opacity: 0.8;
+  }
+}
+
+.completed {
+  font-family: "Oswald", sans-serif;
+  font-size: 5vh;
+  width: 100%;
+  margin: 0%;
+  color: $Black;
+  text-shadow: 1px 1px $White, -1px 1px 0 $White, 1px -1px 0 $White,
+    -1px -1px 0 $White, 0px 1px 0 $White, 0px -1px 0 $White, -1px 0px 0 $White,
+    1px 0px 0 $White, 2px 2px 0 $White, -2px 2px 0 $White, 2px -2px 0 $White,
+    -2px -2px 0 $White, 0px 2px 0 $White, 0px -2px 0 $White, -2px 0px 0 $White,
+    2px 0px 0 $White, 1px 2px 0 $White, -1px 2px 0 $White, 1px -2px 0 $White,
+    -1px -2px 0 $White, 2px 1px 0 $White, -2px 1px 0 $White, 2px -1px 0 $White,
+    -2px -1px 0 $White;
+}
+
+@media (max-width: 800px) {
+  .completed {
+    font-size: 3vh;
+  }
+  .eachLesson {
+    width: 90%;
+  }
+}

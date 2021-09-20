@@ -1,0 +1,41 @@
+{
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.4.1",
+    "@emotion/styled": "^11.3.0",
+    "@material-ui/core": "^5.0.0-beta.5",
+    "@ramonak/react-progress-bar": "^3.2.1",
+    "axios": "^0.21.4",
+    "classnames": "^2.3.1",
+    "file-loader": "^6.2.0",
+    "jwt-decode": "^3.1.2",
+    "next": "11.1.2",
+    "next-redux-wrapper": "^7.0.5",
+    "react": "17.0.2",
+    "react-awesome-reveal": "^3.8.1",
+    "react-dom": "17.0.2",
+    "react-google-login": "^5.2.2",
+    "react-hot-toast": "^2.1.1",
+    "react-redux": "^7.2.5",
+    "react-spring": "^9.2.4",
+    "redux": "^4.1.1",
+    "redux-thunk": "^2.3.0",
+    "sass": "^1.39.2",
+    "styled-components": "^5.3.1",
+    "styled-icons": "^10.38.0",
+    "url-loader": "^4.1.1",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "eslint": "7.32.0",
+    "eslint-config-next": "11.1.2"
+  }
+}

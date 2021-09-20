@@ -1,0 +1,243 @@
+$Pink: #f72585;
+$Purple: #7209b7;
+$DarkBlue: #3a0ca3;
+$Blue: #4361ee;
+$LightBlue: #4cc9f0;
+$White: #ffffff;
+$Black: #231b1b;
+$Grey: #faf9f9;
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Roboto:wght@300&display=swap");
+
+.examples {
+  font-family: "Oswald", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  width: 100%;
+  height: fit-content;
+  min-height: 110vh;
+  background-color: $LightBlue;
+}
+
+.sort {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.divTitle {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+  padding-top: 3%;
+  flex-direction: row;
+}
+
+.title {
+  font-family: "Oswald", sans-serif;
+  font-size: 12vh;
+  margin: 0%;
+  margin-right: 5rem;
+  color: $Black;
+  text-shadow: 1px 1px $White, -1px 1px 0 $White, 1px -1px 0 $White,
+    -1px -1px 0 $White, 0px 1px 0 $White, 0px -1px 0 $White, -1px 0px 0 $White,
+    1px 0px 0 $White, 2px 2px 0 $White, -2px 2px 0 $White, 2px -2px 0 $White,
+    -2px -2px 0 $White, 0px 2px 0 $White, 0px -2px 0 $White, -2px 0px 0 $White,
+    2px 0px 0 $White, 1px 2px 0 $White, -1px 2px 0 $White, 1px -2px 0 $White,
+    -1px -2px 0 $White, 2px 1px 0 $White, -2px 1px 0 $White, 2px -1px 0 $White,
+    -2px -1px 0 $White;
+}
+
+.swap {
+  font-family: "Oswald", sans-serif;
+  font-size: 6vh;
+  color: $Black;
+  font-weight: bold;
+  text-shadow: 1px 1px $White, -1px 1px 0 $White, 1px -1px 0 $White,
+    -1px -1px 0 $White, 0px 1px 0 $White, 0px -1px 0 $White, -1px 0px 0 $White,
+    1px 0px 0 $White, 2px 2px 0 $White, -2px 2px 0 $White, 2px -2px 0 $White,
+    -2px -2px 0 $White, 0px 2px 0 $White, 0px -2px 0 $White, -2px 0px 0 $White,
+    2px 0px 0 $White, 1px 2px 0 $White, -1px 2px 0 $White, 1px -2px 0 $White,
+    -1px -2px 0 $White, 2px 1px 0 $White, -2px 1px 0 $White, 2px -1px 0 $White,
+    -2px -1px 0 $White;
+  margin: 0;
+  margin-bottom: 2rem;
+}
+
+.divSwitch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  flex-direction: row;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 10rem;
+  height: 3rem;
+}
+
+.swap {
+  font-family: "Oswald", sans-serif;
+  font-size: 6vh;
+  color: $Black;
+  font-weight: bold;
+  text-shadow: 1px 1px $White, -1px 1px 0 $White, 1px -1px 0 $White,
+    -1px -1px 0 $White, 0px 1px 0 $White, 0px -1px 0 $White, -1px 0px 0 $White,
+    1px 0px 0 $White, 2px 2px 0 $White, -2px 2px 0 $White, 2px -2px 0 $White,
+    -2px -2px 0 $White, 0px 2px 0 $White, 0px -2px 0 $White, -2px 0px 0 $White,
+    2px 0px 0 $White, 1px 2px 0 $White, -1px 2px 0 $White, 1px -2px 0 $White,
+    -1px -2px 0 $White, 2px 1px 0 $White, -2px 1px 0 $White, 2px -1px 0 $White,
+    -2px -1px 0 $White;
+  margin: 0;
+  margin-right: 2rem;
+  margin-left: 2rem;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $Blue;
+  border: solid 0.2rem $Black;
+  border-radius: 10px 10px 10px 10px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  &:hover {
+    cursor: url(../../images/pointer.png), default;
+  }
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 2rem;
+  width: 2rem;
+  left: 4px;
+  bottom: 4px;
+  background-color: $Grey;
+  border-radius: 50%;
+  border: solid 0.1rem $Black;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: $Pink;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px $Pink;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(7rem);
+  -ms-transform: translateX(7rem);
+  transform: translateX(7rem);
+}
+
+.components {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  width: 100%;
+  margin-bottom: 5%;
+}
+
+.button {
+  width: 40%;
+  margin: 2%;
+  height: 3rem;
+  font-family: "Roboto", sans-serif;
+  border-radius: 10px 10px 10px 10px;
+  font-size: 3vh;
+  font-weight: bold;
+  border: transparent;
+  position: relative;
+  color: $Black;
+  background-color: $Grey;
+  z-index: 2;
+  line-height: 40px;
+  padding: 0;
+}
+
+.button:hover {
+  border: none;
+  cursor: url(../../images/pointer.png), default;
+}
+
+.button:before,
+.button:after {
+  position: absolute;
+  content: "";
+  width: 0%;
+  height: 0%;
+  border: 0.1rem solid;
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+
+.button:before {
+  top: 0;
+  left: 0;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+  border-top-color: $Black;
+  border-left-color: $Black;
+}
+
+.button:after {
+  bottom: 0;
+  right: 0;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: $Black;
+  border-right-color: $Black;
+}
+
+.button:hover:before,
+.button:hover:after {
+  border-color: $Black;
+  height: 100%;
+  width: 100%;
+}
+
+@media (max-width: 800px) {
+  .divTitle {
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 5%;
+  }
+  .title {
+    margin: 0%;
+  }
+  .divSwitch {
+    flex-direction: column;
+  }
+  .swap {
+    margin: 0%;
+    margin-top: 5%;
+    margin-bottom: 10%;
+  }
+  .button {
+    width: 80%;
+  }
+}

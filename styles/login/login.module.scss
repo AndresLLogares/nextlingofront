@@ -1,0 +1,382 @@
+$Pink: #f72585;
+$Purple: #7209b7;
+$DarkBlue: #3a0ca3;
+$Blue: #4361ee;
+$LightBlue: #4cc9f0;
+$White: #ffffff;
+$Black: #231b1b;
+$Grey: #faf9f9;
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Roboto:wght@300&display=swap");
+
+.examples {
+  font-family: "Oswald", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+
+.boxLogin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.bounce {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 60%;
+  border-radius: 10px 10px 10px 10px;
+  border: solid 0.2rem $Black;
+  background-color: $Grey;
+}
+
+.upTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+}
+
+.title {
+  margin: 0%;
+  margin-bottom: 2%;
+  margin-top: 2%;
+  font-family: "Oswald", sans-serif;
+  font-size: 6vh;
+  color: $Black;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+  margin-bottom: 5%;
+}
+
+.eachInput {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.label {
+  display: flex;
+  margin: 0%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: row;
+  font-family: "Roboto", sans-serif;
+  font-size: 2.5vh;
+  color: $Black;
+  font-weight: bold;
+  margin-bottom: 1%;
+}
+
+.icons {
+  max-width: 2rem;
+  min-width: 2rem;
+  max-height: 2rem;
+  min-height: 2rem;
+  margin-right: 1%;
+}
+
+.input {
+  width: 15rem;
+  height: 2.5rem;
+  border-radius: 10px 10px 10px 10px;
+  border: solid 0.2rem $Black;
+  background-color: $White;
+  font-family: "Roboto", sans-serif;
+  font-size: 2.5vh;
+  color: $Black;
+  font-weight: bold;
+}
+
+.sortButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 2%;
+}
+
+.button {
+  width: 30%;
+  margin: 2%;
+  height: 3rem;
+  font-family: "Roboto", sans-serif;
+  border-radius: 10px 10px 10px 10px;
+  font-size: 3vh;
+  font-weight: bold;
+  border: transparent;
+  position: relative;
+  color: $Black;
+  background-color: $LightBlue;
+  z-index: 2;
+  line-height: 40px;
+  padding: 0;
+}
+
+.button:hover {
+  border: none;
+  cursor: url(../../images/pointer.png), default;
+}
+
+.button:before,
+.button:after {
+  position: absolute;
+  content: "";
+  width: 0%;
+  height: 0%;
+  border: 0.1rem solid;
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+
+.button:before {
+  top: 0;
+  left: 0;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+  border-top-color: $Black;
+  border-left-color: $Black;
+}
+
+.button:after {
+  bottom: 0;
+  right: 0;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: $Black;
+  border-right-color: $Black;
+}
+
+.button:hover:before,
+.button:hover:after {
+  border-color: $Black;
+  height: 100%;
+  width: 100%;
+}
+
+.boxGoogle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  padding: 1%;
+  margin-top: 0%;
+  margin-bottom: 5%;
+  font-weight: bold;
+  border-radius: 10px 10px 10px 10px;
+  border: solid 0.2rem $Black;
+  background-color: $LightBlue;
+  &:hover {
+    cursor: url(../../images/pointer.png), default;
+  }
+}
+
+.popup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  right: 5%;
+  top: 30%;
+  width: 25%;
+  z-index: 10;
+  background-color: $Grey;
+  flex-direction: column;
+  border-radius: 10px 10px 10px 10px;
+  border: solid 0.2rem $Black;
+}
+
+.sortPopUp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  width: 100%;
+}
+
+.titlePopUp {
+  font-family: "Oswald", sans-serif;
+  font-size: 3vh;
+  color: $Black;
+  font-weight: bold;
+  margin: 0;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+.buttonPopUp {
+  width: 80%;
+  margin: 2%;
+  font-family: "Roboto", sans-serif;
+  border-radius: 10px 10px 10px 10px;
+  font-size: 3vh;
+  font-weight: bold;
+  border: transparent;
+  position: relative;
+  color: $Black;
+  background-color: $LightBlue;
+  z-index: 2;
+  line-height: 40px;
+  padding: 0;
+}
+
+.buttonPopUp:hover {
+  border: none;
+  cursor: url(../../images/pointer.png), default;
+}
+
+.buttonPopUp:before,
+.buttonPopUp:after {
+  position: absolute;
+  content: "";
+  width: 0%;
+  height: 0%;
+  border: 0.1rem solid;
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+
+.buttonPopUp:before {
+  top: 0;
+  left: 0;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+  border-top-color: $Black;
+  border-left-color: $Black;
+}
+
+.buttonPopUp:after {
+  bottom: 0;
+  right: 0;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: $Black;
+  border-right-color: $Black;
+}
+
+.buttonPopUp:hover:before,
+.buttonPopUp:hover:after {
+  border-color: $Black;
+  height: 100%;
+  width: 100%;
+}
+
+.sortMiniButton {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.miniButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+  background-color: $LightBlue;
+  border-radius: 10px 10px 10px 10px;
+  border: 0.2rem $Black solid;
+  margin: 2%;
+  &:hover {
+    cursor: url(../../images/pointer.png), default;
+    opacity: 0.7;
+  }
+}
+
+.mainReset {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  flex-direction: column;
+  height: fit-content;
+  min-height: 110vh;
+  background-color: $LightBlue;
+}
+
+.sortReset {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+}
+
+.sortTitleReset {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.titleReset {
+  font-family: "Oswald", sans-serif;
+  font-size: 6vh;
+  color: $Black;
+  font-weight: bold;
+  text-shadow: 1px 1px $White, -1px 1px 0 $White, 1px -1px 0 $White,
+    -1px -1px 0 $White, 0px 1px 0 $White, 0px -1px 0 $White, -1px 0px 0 $White,
+    1px 0px 0 $White, 2px 2px 0 $White, -2px 2px 0 $White, 2px -2px 0 $White,
+    -2px -2px 0 $White, 0px 2px 0 $White, 0px -2px 0 $White, -2px 0px 0 $White,
+    2px 0px 0 $White, 1px 2px 0 $White, -1px 2px 0 $White, 1px -2px 0 $White,
+    -1px -2px 0 $White, 2px 1px 0 $White, -2px 1px 0 $White, 2px -1px 0 $White,
+    -2px -1px 0 $White;
+  margin: 0;
+  margin-top: 5%;
+  margin-bottom: 4%;
+}
+
+.sortFormReset {
+  display: flex;
+  width: 60%;
+  background-color: $Grey;
+  border-radius: 10px 10px 10px 10px;
+  border: solid 0.2rem $Black;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@media (max-width: 800px) {
+  .box {
+    width: 90%;
+  }
+  .popup {
+    width: 80%;
+    top: 10%;
+    right: 10%;
+  }
+  .button {
+    width: 50%;
+  }
+
+  .sortFormReset {
+  width: 90%;
+  }
+}

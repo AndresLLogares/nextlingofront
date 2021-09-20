@@ -1,0 +1,236 @@
+$Pink: #f72585;
+$Purple: #7209b7;
+$DarkBlue: #3a0ca3;
+$Blue: #4361ee;
+$LightBlue: #4cc9f0;
+$White: #ffffff;
+$Black: #231b1b;
+$Grey: #faf9f9;
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Roboto:wght@300&display=swap");
+
+.examples {
+  font-family: "Oswald", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+
+.main {
+  width: 100%;
+  height: fit-content;
+  min-height: 110vh;
+  background-color: $LightBlue;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.bounce {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+}
+
+.sortTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+  margin-top: 3%;
+  margin-bottom: 1%;
+}
+
+.title {
+  font-family: "Oswald", sans-serif;
+  font-size: 8vh;
+  color: $Black;
+  font-weight: bold;
+  text-shadow: 1px 1px $White, -1px 1px 0 $White, 1px -1px 0 $White,
+    -1px -1px 0 $White, 0px 1px 0 $White, 0px -1px 0 $White, -1px 0px 0 $White,
+    1px 0px 0 $White, 2px 2px 0 $White, -2px 2px 0 $White, 2px -2px 0 $White,
+    -2px -2px 0 $White, 0px 2px 0 $White, 0px -2px 0 $White, -2px 0px 0 $White,
+    2px 0px 0 $White, 1px 2px 0 $White, -1px 2px 0 $White, 1px -2px 0 $White,
+    -1px -2px 0 $White, 2px 1px 0 $White, -2px 1px 0 $White, 2px -1px 0 $White,
+    -2px -1px 0 $White;
+  margin: 0;
+}
+
+.boxEdit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 90%;
+  border-radius: 10px 10px 10px 10px;
+  border: solid 0.2rem $Black;
+  background-color: $Grey;
+  flex-direction: column;
+  margin-bottom: 5%;
+}
+
+.sortEdit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+  text-align: center;
+}
+
+.miniTitles {
+  font-family: "Roboto", sans-serif;
+  font-size: 5vh;
+  color: $Black;
+  font-weight: bold;
+  text-shadow: 1px 1px $LightBlue, -1px 1px 0 $LightBlue, 1px -1px 0 $LightBlue,
+    -1px -1px 0 $LightBlue, 0px 1px 0 $LightBlue, 0px -1px 0 $LightBlue,
+    -1px 0px 0 $LightBlue, 1px 0px 0 $LightBlue, 2px 2px 0 $LightBlue,
+    -2px 2px 0 $LightBlue, 2px -2px 0 $LightBlue, -2px -2px 0 $LightBlue,
+    0px 2px 0 $LightBlue, 0px -2px 0 $LightBlue, -2px 0px 0 $LightBlue,
+    2px 0px 0 $LightBlue, 1px 2px 0 $LightBlue, -1px 2px 0 $LightBlue,
+    1px -2px 0 $LightBlue, -1px -2px 0 $LightBlue, 2px 1px 0 $LightBlue,
+    -2px 1px 0 $LightBlue, 2px -1px 0 $LightBlue, -2px -1px 0 $LightBlue;
+  margin: 0;
+  margin-bottom: 3%;
+  margin-top: 3%;
+}
+
+.icons {
+  max-width: 2rem;
+  min-width: 2rem;
+  max-height: 2rem;
+  min-height: 2rem;
+  margin-right: 1%;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+}
+
+.eachInput {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.label {
+  display: flex;
+  margin: 0%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: row;
+  font-family: "Roboto", sans-serif;
+  font-size: 3vh;
+  color: $Black;
+  font-weight: bold;
+  margin-bottom: 1%;
+}
+
+.input {
+  width: 20%;
+  height: 2.5rem;
+  border-radius: 10px 10px 10px 10px;
+  border: solid 0.2rem $Black;
+  background-color: $White;
+  font-family: "Roboto", sans-serif;
+  font-size: 2.5vh;
+  color: $Black;
+  font-weight: bold;
+}
+
+.buttonPopUp {
+  width: 20%;
+  margin: 2%;
+  font-family: "Roboto", sans-serif;
+  border-radius: 10px 10px 10px 10px;
+  font-size: 3vh;
+  font-weight: bold;
+  border: transparent;
+  position: relative;
+  color: $Black;
+  background-color: $LightBlue;
+  z-index: 2;
+  line-height: 40px;
+  padding: 0;
+}
+
+.buttonPopUp:hover {
+  border: none;
+  cursor: url(../../images/pointer.png), default;
+}
+
+.buttonPopUp:before,
+.buttonPopUp:after {
+  position: absolute;
+  content: "";
+  width: 0%;
+  height: 0%;
+  border: 0.1rem solid;
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+
+.buttonPopUp:before {
+  top: 0;
+  left: 0;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+  border-top-color: $Black;
+  border-left-color: $Black;
+}
+
+.buttonPopUp:after {
+  bottom: 0;
+  right: 0;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: $Black;
+  border-right-color: $Black;
+}
+
+.buttonPopUp:hover:before,
+.buttonPopUp:hover:after {
+  border-color: $Black;
+  height: 100%;
+  width: 100%;
+}
+
+.image {
+  display: flex;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 10px 10px 10px 10px;
+  border: solid 0.2rem $Black;
+  background-color: $LightBlue;
+}
+
+@media (max-width: 800px) {
+  .miniTitles {
+    font-size: 4vh;
+  }
+  .label {
+    font: size 2vh;
+  }
+  .input {
+    margin-top: 2%;
+    width: 80%;
+  }
+  .buttonPopUp {
+    width: 80%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+}

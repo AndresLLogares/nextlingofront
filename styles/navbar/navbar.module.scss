@@ -1,0 +1,268 @@
+$Pink: #f72585;
+$Purple: #7209b7;
+$DarkBlue: #3a0ca3;
+$Blue: #4361ee;
+$LightBlue: #4cc9f0;
+$White: #ffffff;
+$Black: #231b1b;
+$Grey: #faf9f9;
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Roboto:wght@300&display=swap");
+
+.examples {
+  font-family: "Oswald", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  display: flex;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 20%;
+  height: 100%;
+  background-color: $Blue;
+  border-left: solid 0.2rem $White;
+  align-items: center;
+  flex-direction: column;
+  z-index: 55;
+  justify-content: flex-start;
+}
+
+.none {
+  display: flex;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 20%;
+  height: 100%;
+  background-color: $Blue;
+  border-left: solid 0.2rem $White;
+  align-items: center;
+  flex-direction: column;
+  z-index: 55;
+  justify-content: flex-start;
+}
+
+.bounce {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.sortUp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 0%;
+  width: 100%;
+}
+
+.up {
+  font-family: "Oswald", sans-serif;
+  margin: 0%;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  font-size: 4vh;
+  color: $White;
+}
+
+.sortProfile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  background-color: $Grey;
+  border: 0.2rem solid $Pink;
+  border-radius: 10px 10px 10px 10px;
+  margin-bottom: 5%;
+}
+
+.information {
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  flex-direction: column;
+  width: 100%;
+  margin-left: 10%;
+}
+
+.eachInformation {
+  color: $White;
+  font-family: "Roboto", sans-serif;
+  font-size: 3vh;
+  font-weight: bold;
+  margin: 0%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+.sortButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 2%;
+  margin-bottom: 5%;
+}
+
+.button {
+  font-family: "Roboto", sans-serif;
+  font-size: 3vh;
+  font-weight: bold;
+  color: $White;
+  letter-spacing: 1px;
+  padding: 13px 50px 13px;
+  outline: 0;
+  border: 0.2rem solid $White;
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.button:hover {
+  cursor: url(../../images/pointer.png), default;
+}
+
+.button::after {
+  content: "";
+  background-color: $Pink;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  transition: 0.2s;
+}
+
+.button:hover::after {
+  top: 0px;
+  left: 0px;
+}
+
+.sortMedals {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  margin-top: 4%;
+  margin-bottom: 4%;
+}
+
+.medal {
+  color: $Grey;
+  max-width: 3rem;
+  min-width: 3rem;
+  max-height: 3rem;
+  min-height: 3rem;
+}
+
+.sortInsideButton {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .container {
+    z-index: 10;
+    width: 100%;
+    animation-duration: 1s;
+    animation-name: bounceInLeft;
+  }
+  @keyframes bounceInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-2000px);
+    }
+    60% {
+      opacity: 1;
+      transform: translateX(30px);
+    }
+    80% {
+      transform: translateX(-10px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  .none {
+    z-index: 10;
+    width: 100%;
+    animation-duration: 1s;
+    animation-name: bounceOutLeft;
+    transform: translateX(-2000px);
+  }
+
+  @keyframes bounceOutLeft {
+    0% {
+      transform: translateX(0);
+    }
+    20% {
+      opacity: 1;
+      transform: translateX(20px);
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(-2000px);
+    }
+  }
+
+  .information {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0%;
+  }
+
+  .sortInsideButton {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    justify-content: flex-end;
+    margin-right: 2%;
+    margin-top: 2%;
+  }
+  .miniButton {
+    width: 20%;
+    padding: 1%;
+    border: 0.2rem $Grey solid;
+    border-radius: 10px 10px 10px 10px;
+    background-color: $Pink;
+    &:hover {
+      opacity: 0.8;
+      cursor: url(../../images/pointer.png), default;
+    }
+  }
+  .miniIcon {
+    color: $Grey;
+    min-width: 2rem;
+    max-width: 2rem;
+    min-height: 2rem;
+    max-height: 2rem;
+  }
+  .sortResponsive {
+    position: fixed;
+    top: 5%;
+    right: 2%;
+    z-index: 10;
+  }
+  .miniButtonHome {
+    width: 4rem;
+    padding: 1%;
+    border: 0.2rem $Grey solid;
+    border-radius: 10px 10px 10px 10px;
+    background-color: $Pink;
+    &:hover {
+      opacity: 0.8;
+      cursor: url(../../images/pointer.png), default;
+    }
+  }
+  .sortMedals {
+    flex-direction: row;
+  }
+}

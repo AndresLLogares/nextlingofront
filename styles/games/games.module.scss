@@ -1,0 +1,193 @@
+$Pink: #f72585;
+$Purple: #7209b7;
+$DarkBlue: #3a0ca3;
+$Blue: #4361ee;
+$LightBlue: #4cc9f0;
+$White: #ffffff;
+$Black: #231b1b;
+$Grey: #faf9f9;
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Roboto:wght@300&display=swap");
+
+.examples {
+  font-family: "Oswald", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+  flex-direction: column;
+  border: 0.2rem $Black solid;
+  width: 80%;
+  border-radius: 10px 10px 10px 10px;
+  background-color: $LightBlue;
+}
+
+.sortTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.title {
+  font-family: "Oswald", sans-serif;
+  font-size: 5vh;
+  margin: 0%;
+  color: $Black;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  text-shadow: 1px 1px $White, -1px 1px 0 $White, 1px -1px 0 $White,
+    -1px -1px 0 $White, 0px 1px 0 $White, 0px -1px 0 $White, -1px 0px 0 $White,
+    1px 0px 0 $White, 2px 2px 0 $White, -2px 2px 0 $White, 2px -2px 0 $White,
+    -2px -2px 0 $White, 0px 2px 0 $White, 0px -2px 0 $White, -2px 0px 0 $White,
+    2px 0px 0 $White, 1px 2px 0 $White, -1px 2px 0 $White, 1px -2px 0 $White,
+    -1px -2px 0 $White, 2px 1px 0 $White, -2px 1px 0 $White, 2px -1px 0 $White,
+    -2px -1px 0 $White;
+}
+
+.sortbuttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  flex-wrap: wrap;
+  margin-top: 1%;
+  margin-bottom: 3%;
+}
+
+.phrase {
+  width: fit-content;
+  padding: 1%;
+  background-color: $White;
+  border: transparent;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 3vh;
+  color: $Black;
+  margin: 1%;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.buttonUsed {
+  width: 20%;
+  margin: 2%;
+  font-family: "Roboto", sans-serif;
+  border-radius: 10px 10px 10px 10px;
+  font-size: 4vh;
+  font-weight: bold;
+  border: transparent;
+  position: relative;
+  color: $Black;
+  background-color: $Grey;
+  z-index: 2;
+  line-height: 40px;
+  padding: 0;
+  opacity: 0.5;
+}
+
+.buttonUsed:hover {
+  border: none;
+  cursor: url(../../images/pointer.png), default;
+}
+
+.current {
+  width: 80%;
+  height: 4rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 3vh;
+  font-weight: bold;
+  background-color: $White;
+  border: solid 0.2rem $Black;
+  color: $Black;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.current:hover {
+  cursor: url(../../images/pointer.png), default;
+}
+
+.button {
+  width: 20%;
+  margin: 2%;
+  font-family: "Roboto", sans-serif;
+  border-radius: 10px 10px 10px 10px;
+  font-size: 3vh;
+  font-weight: bold;
+  border: transparent;
+  position: relative;
+  color: $Black;
+  background-color: $Grey;
+  z-index: 2;
+  line-height: 40px;
+  padding: 0;
+}
+
+.button:hover {
+  border: none;
+  cursor: url(../../images/pointer.png), default;
+}
+
+.button:before,
+.button:after {
+  position: absolute;
+  content: "";
+  width: 0%;
+  height: 0%;
+  border: 0.1rem solid;
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+
+.button:before {
+  top: 0;
+  left: 0;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+  border-top-color: $Black;
+  border-left-color: $Black;
+}
+
+.button:after {
+  bottom: 0;
+  right: 0;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: $Black;
+  border-right-color: $Black;
+}
+
+.button:hover:before,
+.button:hover:after {
+  border-color: $Black;
+  height: 100%;
+  width: 100%;
+}
+
+@media (max-width: 800px) {
+  .main {
+    width: 90%;
+  }
+  .sortbuttons {
+    width: 95%;
+  }
+  .button {
+    width: 35%;
+    font-size: 2vh;
+    margin: 2%;
+  }
+  .buttonUsed {
+    width: 35%;
+    font-size: 2vh;
+    margin: 2%;
+  }
+  .current {
+    width: 90%;
+    font-size: 2vh;
+  }
+  .phrase {
+    padding: 2%;
+  }
+}
