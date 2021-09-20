@@ -46,7 +46,6 @@ const SignUp = () => {
           });
           toast.success(response.data.message);
           setTimeout(() => router.push("/"), 1000);
-
         }
       });
   };
