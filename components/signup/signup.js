@@ -7,8 +7,10 @@ import { UserCircle } from "@styled-icons/boxicons-regular/UserCircle";
 import { v4 as uuidv4 } from "uuid";
 import toast from "react-hot-toast";
 import axios from "axios";
+import { useRouter } from "next/router";
 
 const SignUp = () => {
+  const router = useRouter();
   let url = "https://nextlingoapp.herokuapp.com/";
   const [user, setUser] = useState({
     email: "",
@@ -43,10 +45,8 @@ const SignUp = () => {
             email: "",
           });
           toast.success(response.data.message);
-          setTimeout(
-            () => (window.location.href = "http://localhost:3000/"),
-            1000
-          );
+          setTimeout(() => router.push("/"), 1000);
+
         }
       });
   };
