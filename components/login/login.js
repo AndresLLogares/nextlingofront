@@ -11,9 +11,9 @@ import { SETCURRENTUSER } from "../actions/index";
 import { useRouter } from "next/router";
 import { GoogleLogin } from "react-google-login";
 import { v4 as uuidv4 } from "uuid";
-import { GoogleId } from "../../secret/secret";
 import axios from "axios";
 const Login = () => {
+  const GoogleId = process.env.GoogleId;
   const router = useRouter();
   const dispatch = useDispatch();
   let url = "https://nextlingoapp.herokuapp.com/";
@@ -130,7 +130,9 @@ const Login = () => {
               />
             </div>
             <div className={styles.sortButton}>
-              <button type="submit" className={styles.button}>Send</button>
+              <button type="submit" className={styles.button}>
+                Send
+              </button>
             </div>
           </form>
           <div className={styles.boxGoogle}>

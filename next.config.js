@@ -2,6 +2,13 @@ module.exports = {
   images: {
     domains: ["res.cloudinary.com"],
   },
+  env: {
+    GoogleId: process.env.GoogleId,
+    SECRETCLIENT: process.env.SECRETCLIENT,
+    CLOUDINARY_PRESET: process.env.CLOUDINARY_PRESET,
+    CLOUDINARY_APIKEY: process.env.CLOUDINARY_APIKEY,
+    CLOUDINARY_URL: process.env.CLOUDINARY_URL,
+  },
   webpack(config, options) {
     const { isServer } = options;
     config.module.rules.push({

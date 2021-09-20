@@ -8,15 +8,14 @@ import SignUp from "../components/signup/signup";
 import PopUp from "../components/reset/popupreset";
 import { Bounce } from "react-awesome-reveal";
 import { Toaster } from "react-hot-toast";
-export default function Home() {
+
+export default function Home(props) {
   const [swapLogin, setSwapLogin] = useState(true);
-
   const [swapPopUp, setsSwapPopUp] = useState(false);
-
   const swap = () => {
     setSwapLogin(!swapLogin);
   };
-
+  console.log(process.env.CLOUDINARY_URL);
   const handlePopUp = (state) => {
     setsSwapPopUp(state);
   };
@@ -42,10 +41,9 @@ export default function Home() {
           </Bounce>
         </div>
         <div className={styles.divTitle}>
-          <button
-            onClick={() => handlePopUp(true)}
-            className={styles.button}
-          >Do you forget your password?</button>
+          <button onClick={() => handlePopUp(true)} className={styles.button}>
+            Do you forget your password?
+          </button>
         </div>
         <div className={styles.divSwitch}>
           <Bounce>
