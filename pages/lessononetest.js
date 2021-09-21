@@ -59,7 +59,6 @@ const LessonOneTest = () => {
         lesson: "one",
       })
       .then((response) => {
-        console.log(response)
         if (response.data.success) {
           setTimeout(() => {
             router.push("/home");
