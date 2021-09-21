@@ -15,7 +15,6 @@ export default function Home(props) {
   const swap = () => {
     setSwapLogin(!swapLogin);
   };
-  console.log(process.env.CLOUDINARY_URL);
   const handlePopUp = (state) => {
     setsSwapPopUp(state);
   };
