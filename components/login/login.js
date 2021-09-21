@@ -14,7 +14,6 @@ import { v4 as uuidv4 } from "uuid";
 import axios from "axios";
 const Login = () => {
   const GoogleId = process.env.GoogleId;
-  console.log("Clave", GoogleId)
   const router = useRouter();
   const dispatch = useDispatch();
   let url = "https://nextlingoapp.herokuapp.com/";
@@ -68,6 +67,7 @@ const Login = () => {
 
     let tokenId = response.tokenId;
 
+    console.log("TOKEN ID: " + response.tokenId)
     await axios
       .post(url + "google", {
         email: email,
@@ -97,7 +97,7 @@ const Login = () => {
   };
 
   const handleGoogleError = (response) => {
-    console.log("falla", response)
+    console.log("falla", response);
   };
 
   return (
