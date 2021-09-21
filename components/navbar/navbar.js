@@ -27,7 +27,6 @@ const NavBar = () => {
     updateWidthAndHeight();
   }, []);
 
-  console.log(width);
   useEffect(() => {
     window.addEventListener("resize", updateWidthAndHeight);
     return () => window.removeEventListener("resize", updateWidthAndHeight);
