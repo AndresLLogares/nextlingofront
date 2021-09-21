@@ -38,6 +38,14 @@ $Grey: #faf9f9;
   flex-direction: row;
 }
 
+.bounce{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+}
+
 .title {
   font-family: "Oswald", sans-serif;
   font-size: 12vh;
@@ -163,7 +171,7 @@ input:checked + .slider:before {
 }
 
 .button {
-  width: 40%;
+  width: 35%;
   margin: 2%;
   height: 3rem;
   font-family: "Roboto", sans-serif;

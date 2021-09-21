@@ -6,7 +6,7 @@ import Dog from "../images/Dog.png";
 import Login from "../components/login/login";
 import SignUp from "../components/signup/signup";
 import PopUp from "../components/reset/popupreset";
-import { Bounce } from "react-awesome-reveal";
+import { Fade } from "react-awesome-reveal";
 import { Toaster } from "react-hot-toast";
 
 export default function Home(props) {
@@ -34,27 +34,27 @@ export default function Home(props) {
       <div className={styles.sort}>
         <Toaster />
         <div className={styles.divTitle}>
-          <Bounce>
+          <Fade>
             <p className={styles.title}>NextLingo</p>
             <Image src={Dog} alt="" width={150} height={150} />
-          </Bounce>
+          </Fade>
         </div>
         <div className={styles.divTitle}>
-          <Bounce>
+          <Fade className={styles.bounce}>
             <button onClick={() => handlePopUp(true)} className={styles.button}>
               Do you forget your password?
             </button>
-          </Bounce>
+          </Fade>
         </div>
         <div className={styles.divSwitch}>
-          <Bounce>
+          <Fade>
             <p className={styles.swap}>Login</p>
             <label className={styles.switch}>
               <input type="checkbox" />
               <span onClick={swap} className={styles.slider} />
             </label>
             <p className={styles.swap}>Signup</p>
-          </Bounce>
+          </Fade>
         </div>
         <div className={styles.components}>
           {swapPopUp ? <PopUp handle={handlePopUp} /> : null}
