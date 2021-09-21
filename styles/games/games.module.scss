@@ -76,7 +76,7 @@ $Grey: #faf9f9;
   margin: 2%;
   font-family: "Roboto", sans-serif;
   border-radius: 10px 10px 10px 10px;
-  font-size: 4vh;
+  font-size: 2vh;
   font-weight: bold;
   border: transparent;
   position: relative;
@@ -114,7 +114,7 @@ $Grey: #faf9f9;
   margin: 2%;
   font-family: "Roboto", sans-serif;
   border-radius: 10px 10px 10px 10px;
-  font-size: 3vh;
+  font-size: 2vh;
   font-weight: bold;
   border: transparent;
   position: relative;
@@ -175,19 +175,20 @@ $Grey: #faf9f9;
   }
   .button {
     width: 35%;
-    font-size: 2vh;
+    font-size: 1.5vh;
     margin: 2%;
   }
   .buttonUsed {
     width: 35%;
-    font-size: 2vh;
+    font-size: 1.5vh;
     margin: 2%;
   }
   .current {
     width: 90%;
-    font-size: 2vh;
+    font-size: 1.5vh;
   }
   .phrase {
+    font-size: 1.5vh;
     padding: 2%;
   }
 }
