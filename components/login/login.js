@@ -14,6 +14,7 @@ import { v4 as uuidv4 } from "uuid";
 import axios from "axios";
 const Login = () => {
   const GoogleId = process.env.GoogleId;
+  console.log("Clave", GoogleId)
   const router = useRouter();
   const dispatch = useDispatch();
   let url = "https://nextlingoapp.herokuapp.com/";
@@ -97,6 +98,7 @@ const Login = () => {
 
   const handleGoogleError = (response) => {
     toast.error("Error with Google");
+    console.log("falla", response)
   };
 
   return (
