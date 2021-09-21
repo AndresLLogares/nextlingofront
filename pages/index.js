@@ -40,9 +40,11 @@ export default function Home(props) {
           </Bounce>
         </div>
         <div className={styles.divTitle}>
-          <button onClick={() => handlePopUp(true)} className={styles.button}>
-            Do you forget your password?
-          </button>
+          <Bounce>
+            <button onClick={() => handlePopUp(true)} className={styles.button}>
+              Do you forget your password?
+            </button>
+          </Bounce>
         </div>
         <div className={styles.divSwitch}>
           <Bounce>
