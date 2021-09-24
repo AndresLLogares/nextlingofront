@@ -53,7 +53,7 @@ $Grey: #faf9f9;
     -2px -1px 0 $White;
 }
 
-.sortLessons{
+.sortLessons {
   display: flex;
   align-items: left;
   justify-content: left;
@@ -62,19 +62,80 @@ $Grey: #faf9f9;
   z-index: 5;
 }
 
+.buttonNoToken {
+  width: 70%;
+  margin-top: 10%;
+  height: 3rem;
+  font-family: "Roboto", sans-serif;
+  border-radius: 10px 10px 10px 10px;
+  font-size: 3vh;
+  font-weight: bold;
+  border: transparent;
+  position: relative;
+  color: $Black;
+  background-color: $Grey;
+  z-index: 2;
+  line-height: 40px;
+  padding: 0;
+}
+
+.buttonNoToken:hover {
+  border: none;
+  cursor: url(../../images/pointer.png), default;
+}
+
+.buttonNoToken:before,
+.buttonNoToken:after {
+  position: absolute;
+  content: "";
+  width: 0%;
+  height: 0%;
+  border: 0.1rem solid;
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+
+.buttonNoToken:before {
+  top: 0;
+  left: 0;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+  border-top-color: $Black;
+  border-left-color: $Black;
+}
+
+.buttonNoToken:after {
+  bottom: 0;
+  right: 0;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: $Black;
+  border-right-color: $Black;
+}
+
+.buttonNoToken:hover:before,
+.bubuttonNoTokentton:hover:after {
+  border-color: $Black;
+  height: 100%;
+  width: 100%;
+}
+
 @media (max-width: 800px) {
   .sortTitleHome {
-  margin-right: 0;
-  flex-direction:column;
-  margin-top: 5%;
+    margin-right: 0;
+    flex-direction: column;
+    margin-top: 5%;
   }
-  .title{
+  .title {
     font-size: 8vh;
   }
-
-  .sortLessons{
-  align-items: center;
-  justify-content: center;
-  width: 100%;
+  .buttonNoToken {
+    width: 80%;
+    font-size: 2vh;
+  }
+  .sortLessons {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
   }
 }

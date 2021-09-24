@@ -99,8 +99,85 @@ $Grey: #faf9f9;
     -2px -1px 0 $White;
 }
 
+.containerNo {
+  width: 100%;
+  height: fit-content;
+  min-height: 110vh;
+  background-color: $LightBlue;
+}
+
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.buttonNoToken {
+  width: 70%;
+  height: 3rem;
+  margin-top: 10%;
+  font-family: "Roboto", sans-serif;
+  border-radius: 10px 10px 10px 10px;
+  font-size: 3vh;
+  font-weight: bold;
+  border: transparent;
+  position: relative;
+  color: $Black;
+  background-color: $Grey;
+  z-index: 2;
+  line-height: 40px;
+  padding: 0;
+}
+
+.buttonNoToken:hover {
+  border: none;
+  cursor: url(../../images/pointer.png), default;
+}
+
+.buttonNoToken:before,
+.buttonNoToken:after {
+  position: absolute;
+  content: "";
+  width: 0%;
+  height: 0%;
+  border: 0.1rem solid;
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+
+.buttonNoToken:before {
+  top: 0;
+  left: 0;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+  border-top-color: $Black;
+  border-left-color: $Black;
+}
+
+.buttonNoToken:after {
+  bottom: 0;
+  right: 0;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: $Black;
+  border-right-color: $Black;
+}
+
+.buttonNoToken:hover:before,
+.bubuttonNoTokentton:hover:after {
+  border-color: $Black;
+  height: 100%;
+  width: 100%;
+}
+
 @media (max-width: 800px) {
   .title {
-  font-size: 8vh;
+    font-size: 8vh;
+  }
+  .buttonNoToken {
+    width: 80%;
+    font-size: 2vh;
   }
 }

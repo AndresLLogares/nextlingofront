@@ -26,8 +26,11 @@ const LessonThreeTest = () => {
 
   let url = "https://nextlingoapp.herokuapp.com/";
 
+  const [token, setToken] = useState("");
+
   useEffect(() => {
     const fetchUsers = async () => {
+      await setToken(Storage("jwtToken"));
       await dispatch(GETCURRENTUSER(Storage("Email")));
     };
     fetchUsers();
@@ -67,55 +70,70 @@ const LessonThreeTest = () => {
       });
   };
   return (
-    <main className={styles.main}>
-      <div className="box">
-        <div className="wave -one"></div>
-        <div className="wave -two"></div>
-        <div className="wave -three"></div>
-      </div>
-      {success ? (
-        <div className={styles.success}>
-          <Image src={DogGood} alt="" width={300} height={300} />
-        </div>
-      ) : null}
-      <Toaster />
-      <div className={styles.sort}>
-        <Fade className={styles.bounce}>
-          <div className={styles.sortTitle}>
-            <p className={styles.title}>Lesson Three</p>
+    <Fragment>
+      {!token ? (
+        <main className={styles.containerNo}>
+          <div className={styles.home}>
+            <button
+              className={styles.buttonNoToken}
+              onClick={() => router.push("/")}
+            >
+              You are not authorized to be here
+            </button>
           </div>
-        </Fade>
-        <Fade className={styles.bounce}>
-          <div className={styles.sortProgress}>
-            <ProgressBar
-              labelColor="#4361ee"
-              labelSize="5vh"
-              labelAlignment="inside"
-              borderRadius="10px 10px 10px 10px"
-              baseBgColor="#faf9f9"
-              height="3rem"
-              width="20rem"
-              bgColor="#f72585"
-              completed={progress}
-            />
+        </main>
+      ) : (
+        <main className={styles.main}>
+          <div className="box">
+            <div className="wave -one"></div>
+            <div className="wave -two"></div>
+            <div className="wave -three"></div>
           </div>
-        </Fade>
-        {exerciseOne ? null : (
-          <div className={styles.containerGames}>
+          {success ? (
+            <div className={styles.success}>
+              <Image src={DogGood} alt="" width={300} height={300} />
+            </div>
+          ) : null}
+          <Toaster />
+          <div className={styles.sort}>
             <Fade className={styles.bounce}>
-              <PairOne completed={oneCompleted} />
+              <div className={styles.sortTitle}>
+                <p className={styles.title}>Lesson Three</p>
+              </div>
             </Fade>
-          </div>
-        )}
-        {exerciseTwo ? null : (
-          <div className={styles.containerGames}>
             <Fade className={styles.bounce}>
-              <GameOne completed={TwoCompleted} />
+              <div className={styles.sortProgress}>
+                <ProgressBar
+                  labelColor="#4361ee"
+                  labelSize="5vh"
+                  labelAlignment="inside"
+                  borderRadius="10px 10px 10px 10px"
+                  baseBgColor="#faf9f9"
+                  height="3rem"
+                  width="20rem"
+                  bgColor="#f72585"
+                  completed={progress}
+                />
+              </div>
             </Fade>
+            {exerciseOne ? null : (
+              <div className={styles.containerGames}>
+                <Fade className={styles.bounce}>
+                  <PairOne completed={oneCompleted} />
+                </Fade>
+              </div>
+            )}
+            {exerciseTwo ? null : (
+              <div className={styles.containerGames}>
+                <Fade className={styles.bounce}>
+                  <GameOne completed={TwoCompleted} />
+                </Fade>
+              </div>
+            )}
           </div>
-        )}
-      </div>
-    </main>
+        </main>
+      )}
+    </Fragment>
   );
 };
 

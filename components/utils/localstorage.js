@@ -4,6 +4,9 @@ const storage = (name) => {
     case "Email":
       result = window.localStorage.getItem(name);
       break;
+    case "jwtToken":
+      result = window.localStorage.getItem(name);
+      break;
     default:
       alert("localStorage type undefined");
       break;

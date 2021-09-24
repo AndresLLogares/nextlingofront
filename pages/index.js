@@ -54,8 +54,8 @@ export default function Home(props) {
           <Fade>
             <p className={styles.swap}>Login</p>
             <label className={styles.switch}>
-              <input checked={!swapLogin} type="checkbox" />
-              <span onClick={swap} className={styles.slider} />
+              <input onChange={swap} checked={!swapLogin} type="checkbox" />
+              <span  className={styles.slider} />
             </label>
             <p className={styles.swap}>Signup</p>
           </Fade>

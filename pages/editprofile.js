@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Fragment } from "react";
 import axios from "axios";
 import Image from "next/image";
 import { useRouter } from "next/router";
@@ -19,12 +19,15 @@ const EditProfile = () => {
   const CLOUDINARY_URL = process.env.CLOUDINARY_URL;
   let url = "https://nextlingoapp.herokuapp.com/";
 
+  const [token, setToken] = useState("");
+
   const dispatch = useDispatch();
 
   const user = useSelector((state) => state.NextLingo.currentuser.user);
 
   useEffect(() => {
     const fetchUsers = async () => {
+      await setToken(Storage("jwtToken"));
       await dispatch(GETCURRENTUSER(Storage("Email")));
     };
     fetchUsers();
@@ -70,93 +73,111 @@ const EditProfile = () => {
     setUsername(event.target.value);
   };
   return (
-    <main className={styles.main}>
-      <Fade className={styles.bounce}>
-        <div className={styles.sortTitle}>
-          <p className={styles.title}>Edit Profile</p>
-        </div>
-      </Fade>
-      <Toaster />
-      <div className={styles.boxEdit}>
-        <Fade className={styles.bounce}>
-          <div className={styles.sortEdit}>
-            <p className={styles.miniTitles}> Username: {user?.username}</p>
+    <Fragment>
+      {!token ? (
+        <main className={styles.containerNo}>
+          <div className={styles.home}>
+            <button
+              className={styles.buttonNoToken}
+              onClick={() => router.push("/")}
+            >
+              You are not authorized to be here
+            </button>
           </div>
-        </Fade>
-        <div className={styles.sortEdit}>
+        </main>
+      ) : (
+        <main className={styles.main}>
           <Fade className={styles.bounce}>
-            <form onSubmit={handleSubmit} className={styles.form}>
-              <div className={styles.eachInput}>
-                <label className={styles.label}>
-                  <Profile className={styles.icons} />
-                  Change User Name
-                </label>
-                <input
-                  className={styles.input}
-                  required={true}
-                  onChange={handleInputChange}
-                  type="text"
-                />
-              </div>
-              <button type="submit" className={styles.buttonPopUp}>
-                Change
-              </button>
-            </form>
-          </Fade>
-        </div>
-        <div className={styles.sortEdit}>
-          <Fade className={styles.bounce}>
-            <div className={styles.image}>
-              {user?.photo_profile ? (
-                <Image
-                  src={user?.photo_profile}
-                  alt=""
-                  width={240}
-                  height={240}
-                />
-              ) : (
-                <Image src={NoUser} alt="" width={240} height={240} />
-              )}
+            <div className={styles.sortTitle}>
+              <p className={styles.title}>Edit Profile</p>
             </div>
           </Fade>
-        </div>
-        <div className={styles.sortEdit}>
-          <Fade className={styles.bounce}>
-            <button className={styles.buttonPopUp} onClick={handleInputFile}>
-              <VectorPen className={styles.icons} />
-              Change Profile Picture
-            </button>
-          </Fade>
-          <input
-            onChange={HandleImage}
-            type="file"
-            style={{ display: "none" }}
-            id="file"
-            name="file"
-          />
-        </div>
-        <div className={styles.sortEdit}>
-          <Fade className={styles.bounce}>
-            <button
-              onClick={() => router.push("/reset")}
-              className={styles.buttonPopUp}
-            >
-              Change Password
-            </button>
-          </Fade>
-        </div>
-        <div className={styles.sortEdit}>
-          <Fade className={styles.bounce}>
-            <button
-              onClick={() => router.push("/home")}
-              className={styles.buttonPopUp}
-            >
-              Come back to Home
-            </button>
-          </Fade>
-        </div>
-      </div>
-    </main>
+          <Toaster />
+          <div className={styles.boxEdit}>
+            <Fade className={styles.bounce}>
+              <div className={styles.sortEdit}>
+                <p className={styles.miniTitles}> Username: {user?.username}</p>
+              </div>
+            </Fade>
+            <div className={styles.sortEdit}>
+              <Fade className={styles.bounce}>
+                <form onSubmit={handleSubmit} className={styles.form}>
+                  <div className={styles.eachInput}>
+                    <label className={styles.label}>
+                      <Profile className={styles.icons} />
+                      Change User Name
+                    </label>
+                    <input
+                      className={styles.input}
+                      required={true}
+                      onChange={handleInputChange}
+                      type="text"
+                    />
+                  </div>
+                  <button type="submit" className={styles.buttonPopUp}>
+                    Change
+                  </button>
+                </form>
+              </Fade>
+            </div>
+            <div className={styles.sortEdit}>
+              <Fade className={styles.bounce}>
+                <div className={styles.image}>
+                  {user?.photo_profile ? (
+                    <Image
+                      src={user?.photo_profile}
+                      alt=""
+                      width={240}
+                      height={240}
+                    />
+                  ) : (
+                    <Image src={NoUser} alt="" width={240} height={240} />
+                  )}
+                </div>
+              </Fade>
+            </div>
+            <div className={styles.sortEdit}>
+              <Fade className={styles.bounce}>
+                <button
+                  className={styles.buttonPopUp}
+                  onClick={handleInputFile}
+                >
+                  <VectorPen className={styles.icons} />
+                  Change Profile Picture
+                </button>
+              </Fade>
+              <input
+                onChange={HandleImage}
+                type="file"
+                style={{ display: "none" }}
+                id="file"
+                name="file"
+              />
+            </div>
+            <div className={styles.sortEdit}>
+              <Fade className={styles.bounce}>
+                <button
+                  onClick={() => router.push("/reset")}
+                  className={styles.buttonPopUp}
+                >
+                  Change Password
+                </button>
+              </Fade>
+            </div>
+            <div className={styles.sortEdit}>
+              <Fade className={styles.bounce}>
+                <button
+                  onClick={() => router.push("/home")}
+                  className={styles.buttonPopUp}
+                >
+                  Come back to Home
+                </button>
+              </Fade>
+            </div>
+          </div>
+        </main>
+      )}
+    </Fragment>
   );
 };
 

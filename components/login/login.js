@@ -95,7 +95,7 @@ const Login = () => {
   };
 
   const handleGoogleError = (response) => {
-    console.log("falla", response);
+    return toast.error("Error Login");
   };
 
   return (
