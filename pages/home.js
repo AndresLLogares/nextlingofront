@@ -14,7 +14,7 @@ const Home = () => {
   const [token, setToken] = useState("");
   useEffect(() => {
     const fetchUsers = async () => {
-      await setToken(Storage("jwtToken"));
+      await setToken(Storage("Email"));
     };
     fetchUsers();
   }, []);

@@ -27,7 +27,7 @@ const EditProfile = () => {
 
   useEffect(() => {
     const fetchUsers = async () => {
-      await setToken(Storage("jwtToken"));
+      await setToken(Storage("Email"));
       await dispatch(GETCURRENTUSER(Storage("Email")));
     };
     fetchUsers();

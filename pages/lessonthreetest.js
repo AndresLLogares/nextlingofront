@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Fragment } from "react";
 import ProgressBar from "@ramonak/react-progress-bar";
 import { Fade } from "react-awesome-reveal";
 import styles from "../styles/lessonstest/lessonstests.module.scss";
@@ -30,7 +30,7 @@ const LessonThreeTest = () => {
 
   useEffect(() => {
     const fetchUsers = async () => {
-      await setToken(Storage("jwtToken"));
+      await setToken(Storage("Email"));
       await dispatch(GETCURRENTUSER(Storage("Email")));
     };
     fetchUsers();
