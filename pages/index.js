@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import styles from "../styles/landpage/landpage.module.scss";
 import Dog from "../images/Dog.png";
 import Login from "../components/login/login";
@@ -12,6 +12,7 @@ import { Toaster } from "react-hot-toast";
 export default function Home(props) {
   const [swapLogin, setSwapLogin] = useState(true);
   const [swapPopUp, setsSwapPopUp] = useState(false);
+  const swapRef = useRef(null);
   const swap = () => {
     setSwapLogin(!swapLogin);
   };
@@ -53,7 +54,7 @@ export default function Home(props) {
           <Fade>
             <p className={styles.swap}>Login</p>
             <label className={styles.switch}>
-              <input type="checkbox" />
+              <input checked={!swapLogin} type="checkbox" />
               <span onClick={swap} className={styles.slider} />
             </label>
             <p className={styles.swap}>Signup</p>
