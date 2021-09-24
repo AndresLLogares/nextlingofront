@@ -67,7 +67,6 @@ const Login = () => {
 
     let tokenId = response.tokenId;
 
-    console.log("TOKEN ID: " + response.tokenId)
     await axios
       .post(url + "google", {
         email: email,
@@ -78,7 +77,6 @@ const Login = () => {
         tokenId: tokenId,
       })
       .then(async (response) => {
-        console.log(response.data);
         if (!response.data.token) {
           return toast.error("Error Login");
         } else {
