@@ -9,7 +9,7 @@ import toast from "react-hot-toast";
 import axios from "axios";
 import { useRouter } from "next/router";
 
-const SignUp = () => {
+const SignUp = (props) => {
   const router = useRouter();
   let url = "https://nextlingoapp.herokuapp.com/";
   const [user, setUser] = useState({
@@ -44,6 +44,7 @@ const SignUp = () => {
             username: "",
             email: "",
           });
+          props.swap(true);
           toast.success(response.data.message);
         }
       });
@@ -104,7 +105,9 @@ const SignUp = () => {
               />
             </div>
             <div className={styles.sortButton}>
-              <button type="submit" className={styles.button}>Send</button>
+              <button type="submit" className={styles.button}>
+                Send
+              </button>
             </div>
           </form>
         </div>

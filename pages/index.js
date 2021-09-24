@@ -19,6 +19,9 @@ export default function Home(props) {
     setsSwapPopUp(state);
   };
 
+  const handleSignUp = (state) => {
+    setSwapLogin(state);
+  };
   return (
     <main className={styles.container}>
       <div className="box">
@@ -58,7 +61,7 @@ export default function Home(props) {
         </div>
         <div className={styles.components}>
           {swapPopUp ? <PopUp handle={handlePopUp} /> : null}
-          {swapLogin ? <Login /> : <SignUp />}
+          {swapLogin ? <Login /> : <SignUp swap={handleSignUp} />}
         </div>
       </div>
     </main>
