@@ -62,6 +62,7 @@ const SignUp = (props) => {
                 name="email"
                 type="email"
                 onChange={handleInputChange}
+                placeholder={'name@email.com'}
                 required={true}
                 className={styles.input}
               />
@@ -73,6 +74,7 @@ const SignUp = (props) => {
               <input
                 name="username"
                 type="text"
+                placeholder={'John Doe'}
                 onChange={handleInputChange}
                 required={true}
                 className={styles.input}
@@ -86,6 +88,7 @@ const SignUp = (props) => {
               <input
                 type="password"
                 name="password"
+                placeholder={'xxxxxxxx'}
                 onChange={handleInputChange}
                 required={true}
                 className={styles.input}
@@ -99,6 +102,7 @@ const SignUp = (props) => {
               <input
                 type="password"
                 name="controlPassword"
+                placeholder={'xxxxxxxx'}
                 onChange={handleInputChange}
                 required={true}
                 className={styles.input}

@@ -7,23 +7,23 @@ $White: #ffffff;
 $Black: #231b1b;
 $Grey: #faf9f9;
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Murecho:wght@300&family=Trispace:wght@300&display=swap");
 
 .examples {
   font-family: "Oswald", sans-serif;
   font-family: "Roboto", sans-serif;
+  font-family: "Murecho", sans-serif;
+  font-family: "Trispace", sans-serif;
 }
-
 .main {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   flex-direction: column;
   width: 80%;
-  background-color: $Grey;
-  margin-top: 3%;
-  margin-bottom: 3%;
-  border-radius: 10px 10px 10px 10px;
-  border: 0.2rem $Black solid;
+  margin-top: 5rem;
+  margin-bottom:5rem;
 }
 
 .bounce {
@@ -38,29 +38,28 @@ $Grey: #faf9f9;
   align-items: center;
   justify-content: center;
   text-align: center;
+  text-align: center;
   width: 100%;
 }
 
 .title {
-  font-family: "Oswald", sans-serif;
-  font-size: 4vh;
+  display: flex;
+  font-family: "Trispace", sans-serif;
+  font-size: 5vh;
   font-weight: bold;
-  color: $Black;
+  color: $White;
   margin: 0%;
-  margin-top: 1%;
-  margin-bottom: 2%;
+  margin-bottom: 2rem;
 }
 
 .eachLesson {
   display: flex;
   align-items: center;
   flex-direction: column;
-  width: 25%;
-  border: 0.2rem $Black solid;
+  width: 25rem;
   background-color: $LightBlue;
   border-radius: 10px 10px 10px 10px;
-  margin-top: 2%;
-  margin-bottom: 2%;
+  box-shadow: 0px 2px 30px 6px rgba(0, 0, 0, 0.5);
   padding: 2%;
   &:hover {
     cursor: url(../../images/pointer.png), default;
@@ -70,11 +69,11 @@ $Grey: #faf9f9;
 
 .titleLesson {
   margin: 0%;
-  margin-top: 10%;
-  font-family: "Roboto", sans-serif;
+  margin-top: 2rem;
+  font-family: "Trispace", sans-serif;
   font-size: 3vh;
   font-weight: bold;
-  color: $White;
+  color: $Black;
 }
 
 .eachLessonCompleted {
@@ -83,9 +82,9 @@ $Grey: #faf9f9;
   flex-direction: column;
   text-align: center;
   width: 80%;
-  border: 0.2rem $Black solid;
   background-color: $LightBlue;
   border-radius: 10px 10px 10px 10px;
+  box-shadow: 0px 2px 30px 6px rgba(0, 0, 0, 0.5);
   margin-top: 2%;
   margin-bottom: 2%;
   padding: 2%;
@@ -96,18 +95,14 @@ $Grey: #faf9f9;
 }
 
 .completed {
-  font-family: "Oswald", sans-serif;
-  font-size: 5vh;
+  font-family: "Trispace", sans-serif;
+  font-size: 4vh;
   width: 100%;
   margin: 0%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
   color: $Black;
-  text-shadow: 1px 1px $White, -1px 1px 0 $White, 1px -1px 0 $White,
-    -1px -1px 0 $White, 0px 1px 0 $White, 0px -1px 0 $White, -1px 0px 0 $White,
-    1px 0px 0 $White, 2px 2px 0 $White, -2px 2px 0 $White, 2px -2px 0 $White,
-    -2px -2px 0 $White, 0px 2px 0 $White, 0px -2px 0 $White, -2px 0px 0 $White,
-    2px 0px 0 $White, 1px 2px 0 $White, -1px 2px 0 $White, 1px -2px 0 $White,
-    -1px -2px 0 $White, 2px 1px 0 $White, -2px 1px 0 $White, 2px -1px 0 $White,
-    -2px -1px 0 $White;
 }
 
 @media (max-width: 800px) {
@@ -115,6 +110,6 @@ $Grey: #faf9f9;
     font-size: 3vh;
   }
   .eachLesson {
-    width: 90%;
+    width: 25rem;
   }
 }

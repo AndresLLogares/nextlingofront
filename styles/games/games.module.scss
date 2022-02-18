@@ -7,10 +7,13 @@ $White: #ffffff;
 $Black: #231b1b;
 $Grey: #faf9f9;
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Murecho:wght@300&family=Trispace:wght@300&display=swap");
 
 .examples {
   font-family: "Oswald", sans-serif;
   font-family: "Roboto", sans-serif;
+  font-family: "Murecho", sans-serif;
+  font-family: "Trispace", sans-serif;
 }
 
 .main {
@@ -19,33 +22,29 @@ $Grey: #faf9f9;
   justify-content: center;
   height: fit-content;
   flex-direction: column;
-  border: 0.2rem $Black solid;
   width: 80%;
   border-radius: 10px 10px 10px 10px;
-  background-color: $LightBlue;
+  box-shadow: 0px 2px 30px 6px rgba(0, 0, 0, 0.5);
+  background-color: $Grey;
+  margin-bottom: 5rem;
 }
 
 .sortTitle {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   width: 100%;
 }
 
 .title {
-  font-family: "Oswald", sans-serif;
+  font-family: "Trispace", sans-serif;
   font-size: 5vh;
   margin: 0%;
-  color: $Black;
-  margin-top: 2%;
-  margin-bottom: 2%;
-  text-shadow: 1px 1px $White, -1px 1px 0 $White, 1px -1px 0 $White,
-    -1px -1px 0 $White, 0px 1px 0 $White, 0px -1px 0 $White, -1px 0px 0 $White,
-    1px 0px 0 $White, 2px 2px 0 $White, -2px 2px 0 $White, 2px -2px 0 $White,
-    -2px -2px 0 $White, 0px 2px 0 $White, 0px -2px 0 $White, -2px 0px 0 $White,
-    2px 0px 0 $White, 1px 2px 0 $White, -1px 2px 0 $White, 1px -2px 0 $White,
-    -1px -2px 0 $White, 2px 1px 0 $White, -2px 1px 0 $White, 2px -1px 0 $White,
-    -2px -1px 0 $White;
+  color: $Blue;
+  font-weight: bold;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .sortbuttons {
@@ -54,16 +53,15 @@ $Grey: #faf9f9;
   justify-content: center;
   width: 90%;
   flex-wrap: wrap;
-  margin-top: 1%;
-  margin-bottom: 3%;
+  margin-bottom: 2rem;
 }
 
 .phrase {
   width: fit-content;
   padding: 1%;
-  background-color: $White;
+  background-color: $LightBlue;
   border: transparent;
-  font-family: "Roboto", sans-serif;
+  font-family: "Trispace", sans-serif;
   font-weight: bold;
   font-size: 3vh;
   color: $Black;
@@ -72,16 +70,17 @@ $Grey: #faf9f9;
 }
 
 .buttonUsed {
-  width: 20%;
-  margin: 2%;
-  font-family: "Roboto", sans-serif;
+  width: 20rem;
+  margin: 1rem;
+  height: 3rem;
+  font-family: "Trispace", sans-serif;
   border-radius: 10px 10px 10px 10px;
-  font-size: 2vh;
+  font-size: 3vh;
   font-weight: bold;
   border: transparent;
   position: relative;
   color: $Black;
-  background-color: $Grey;
+  background-color: $LightBlue;
   z-index: 2;
   line-height: 40px;
   padding: 0;
@@ -96,12 +95,12 @@ $Grey: #faf9f9;
 .current {
   width: 80%;
   height: 4rem;
-  font-family: "Roboto", sans-serif;
+  font-family: "Trispace", sans-serif;
   font-size: 3vh;
   font-weight: bold;
-  background-color: $White;
-  border: solid 0.2rem $Black;
-  color: $Black;
+  background-color: $Blue;
+  border: transparent;
+  color: $White;
   border-radius: 10px 10px 10px 10px;
 }
 
@@ -110,16 +109,17 @@ $Grey: #faf9f9;
 }
 
 .button {
-  width: 20%;
-  margin: 2%;
-  font-family: "Roboto", sans-serif;
+  width: 20rem;
+  margin: 1rem;
+  height: 3rem;
+  font-family: "Trispace", sans-serif;
   border-radius: 10px 10px 10px 10px;
-  font-size: 2vh;
+  font-size: 3vh;
   font-weight: bold;
   border: transparent;
   position: relative;
-  color: $Black;
-  background-color: $Grey;
+  color: $White;
+  background-color: $Blue;
   z-index: 2;
   line-height: 40px;
   padding: 0;
@@ -136,7 +136,7 @@ $Grey: #faf9f9;
   content: "";
   width: 0%;
   height: 0%;
-  border: 0.1rem solid;
+  border: 0.2rem solid;
   z-index: -1;
   transition: all 0.3s ease;
 }
@@ -170,25 +170,29 @@ $Grey: #faf9f9;
   .main {
     width: 90%;
   }
+  .title {
+    font-size: 4vh;
+  }
   .sortbuttons {
     width: 95%;
   }
   .button {
-    width: 35%;
-    font-size: 1.5vh;
-    margin: 2%;
+    width: 9rem;
+    font-size: 2vh;
+    margin: 0.5rem;
   }
   .buttonUsed {
-    width: 35%;
-    font-size: 1.5vh;
-    margin: 2%;
+    width: 9rem;
+    font-size: 2vh;
+    margin: 0.5rem;
   }
   .current {
-    width: 90%;
-    font-size: 1.5vh;
+    width: 20rem;
+    font-size: 2vh;
   }
   .phrase {
-    font-size: 1.5vh;
-    padding: 2%;
+    width: 9rem;
+    font-size: 2vh;
+    margin: 0.5rem;
   }
 }

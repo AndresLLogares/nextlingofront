@@ -7,17 +7,25 @@ $White: #ffffff;
 $Black: #231b1b;
 $Grey: #faf9f9;
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Murecho:wght@300&family=Trispace:wght@300&display=swap");
+
+@font-face {
+  font-family: Meows;
+  src: url("../../fonts/Meows.ttf") format("opentype");
+}
 
 .examples {
   font-family: "Oswald", sans-serif;
   font-family: "Roboto", sans-serif;
+  font-family: "Murecho", sans-serif;
+  font-family: "Trispace", sans-serif;
 }
 
 .container {
   width: 100%;
   height: fit-content;
   min-height: 110vh;
-  background-color: $LightBlue;
+  background-color: $Blue;
 }
 
 .sort {
@@ -30,15 +38,35 @@ $Grey: #faf9f9;
 
 .divTitle {
   display: flex;
+  align-items: flex-end;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 10rem;
+  flex-direction: row;
+}
+
+.divForget{
+  display: flex;
   align-items: center;
   text-align: center;
   justify-content: center;
   width: 100%;
-  padding-top: 3%;
+  margin-top: 5rem;
   flex-direction: row;
 }
 
-.bounce{
+.divSwitch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  flex-direction: row;
+}
+
+.bounce {
   display: flex;
   align-items: center;
   text-align: center;
@@ -47,8 +75,8 @@ $Grey: #faf9f9;
 }
 
 .title {
-  font-family: "Oswald", sans-serif;
-  font-size: 12vh;
+  font-family: "Meows", sans-serif;
+  font-size: 15vh;
   margin: 0%;
   margin-right: 5rem;
   color: $Black;
@@ -61,32 +89,6 @@ $Grey: #faf9f9;
     -2px -1px 0 $White;
 }
 
-.swap {
-  font-family: "Oswald", sans-serif;
-  font-size: 6vh;
-  color: $Black;
-  font-weight: bold;
-  text-shadow: 1px 1px $White, -1px 1px 0 $White, 1px -1px 0 $White,
-    -1px -1px 0 $White, 0px 1px 0 $White, 0px -1px 0 $White, -1px 0px 0 $White,
-    1px 0px 0 $White, 2px 2px 0 $White, -2px 2px 0 $White, 2px -2px 0 $White,
-    -2px -2px 0 $White, 0px 2px 0 $White, 0px -2px 0 $White, -2px 0px 0 $White,
-    2px 0px 0 $White, 1px 2px 0 $White, -1px 2px 0 $White, 1px -2px 0 $White,
-    -1px -2px 0 $White, 2px 1px 0 $White, -2px 1px 0 $White, 2px -1px 0 $White,
-    -2px -1px 0 $White;
-  margin: 0;
-  margin-bottom: 2rem;
-}
-
-.divSwitch {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  margin-top: 2%;
-  margin-bottom: 2%;
-  flex-direction: row;
-}
-
 .switch {
   position: relative;
   display: inline-block;
@@ -95,7 +97,7 @@ $Grey: #faf9f9;
 }
 
 .swap {
-  font-family: "Oswald", sans-serif;
+  font-family: "Trispace", sans-serif;
   font-size: 6vh;
   color: $Black;
   font-weight: bold;
@@ -124,9 +126,9 @@ $Grey: #faf9f9;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: $Blue;
-  border: solid 0.2rem $Black;
-  border-radius: 10px 10px 10px 10px;
+  background-color: $LightBlue;
+  border: solid 0.2rem $White;
+  border-radius: 0px 10px 0px 10px;
   -webkit-transition: 0.4s;
   transition: 0.4s;
   &:hover {
@@ -141,19 +143,19 @@ $Grey: #faf9f9;
   width: 2rem;
   left: 4px;
   bottom: 4px;
-  background-color: $Grey;
-  border-radius: 50%;
+  background-color: $Black;
+  border-radius: 100%;
   border: solid 0.1rem $Black;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
 input:checked + .slider {
-  background-color: $Pink;
+  background-color: $Blue;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px $Pink;
+  box-shadow: 0 0 1px $Blue;
 }
 
 input:checked + .slider:before {
@@ -167,12 +169,11 @@ input:checked + .slider:before {
   align-items: center;
   justify-self: center;
   width: 100%;
-  margin-bottom: 5%;
+  margin-bottom: 5rem;
 }
 
 .button {
   width: 35%;
-  margin: 2%;
   height: 3rem;
   font-family: "Roboto", sans-serif;
   border-radius: 10px 10px 10px 10px;
@@ -180,8 +181,8 @@ input:checked + .slider:before {
   font-weight: bold;
   border: transparent;
   position: relative;
-  color: $Black;
-  background-color: $Grey;
+  color: $White;
+  background-color: $LightBlue;
   z-index: 2;
   line-height: 40px;
   padding: 0;
@@ -198,7 +199,7 @@ input:checked + .slider:before {
   content: "";
   width: 0%;
   height: 0%;
-  border: 0.1rem solid;
+  border: 0.2rem solid;
   z-index: -1;
   transition: all 0.3s ease;
 }
@@ -208,8 +209,8 @@ input:checked + .slider:before {
   left: 0;
   border-bottom-color: transparent;
   border-right-color: transparent;
-  border-top-color: $Black;
-  border-left-color: $Black;
+  border-top-color: $White;
+  border-left-color: $White;
 }
 
 .button:after {
@@ -217,13 +218,13 @@ input:checked + .slider:before {
   right: 0;
   border-top-color: transparent;
   border-left-color: transparent;
-  border-bottom-color: $Black;
-  border-right-color: $Black;
+  border-bottom-color: $White;
+  border-right-color: $White;
 }
 
 .button:hover:before,
 .button:hover:after {
-  border-color: $Black;
+  border-color: $White;
   height: 100%;
   width: 100%;
 }
@@ -232,9 +233,11 @@ input:checked + .slider:before {
   .divTitle {
     flex-direction: column;
     text-align: center;
+    align-items: center;
     margin-bottom: 5%;
   }
   .title {
+    font-size: 9vh;
     margin: 0%;
   }
   .divSwitch {

@@ -104,11 +104,11 @@ const LessonOneTest = () => {
             <Fade className={styles.bounce}>
               <div className={styles.sortProgress}>
                 <ProgressBar
-                  labelColor="#4361ee"
+                  labelColor="#faf9f9"
                   labelSize="5vh"
                   labelAlignment="inside"
                   borderRadius="10px 10px 10px 10px"
-                  baseBgColor="#faf9f9"
+                  baseBgColor="#4cc9f0"
                   height="3rem"
                   width="20rem"
                   bgColor="#f72585"

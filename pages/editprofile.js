@@ -105,16 +105,17 @@ const EditProfile = () => {
                   <div className={styles.eachInput}>
                     <label className={styles.label}>
                       <Profile className={styles.icons} />
-                      Change User Name
+                      Change Username
                     </label>
                     <input
                       className={styles.input}
                       required={true}
                       onChange={handleInputChange}
+                      placeholder="John Doe"
                       type="text"
                     />
                   </div>
-                  <button type="submit" className={styles.buttonPopUp}>
+                  <button type="submit" className={styles.button}>
                     Change
                   </button>
                 </form>
@@ -139,7 +140,7 @@ const EditProfile = () => {
             <div className={styles.sortEdit}>
               <Fade className={styles.bounce}>
                 <button
-                  className={styles.buttonPopUp}
+                  className={styles.button}
                   onClick={handleInputFile}
                 >
                   <VectorPen className={styles.icons} />
@@ -158,7 +159,7 @@ const EditProfile = () => {
               <Fade className={styles.bounce}>
                 <button
                   onClick={() => router.push("/reset")}
-                  className={styles.buttonPopUp}
+                  className={styles.button}
                 >
                   Change Password
                 </button>
@@ -168,7 +169,7 @@ const EditProfile = () => {
               <Fade className={styles.bounce}>
                 <button
                   onClick={() => router.push("/home")}
-                  className={styles.buttonPopUp}
+                  className={styles.button}
                 >
                   Come back to Home
                 </button>

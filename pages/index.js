@@ -39,11 +39,11 @@ export default function Home(props) {
         <Toaster />
         <div className={styles.divTitle}>
           <Fade>
-            <p className={styles.title}>NextLingo</p>
-            <Image src={Dog} alt="" width={150} height={150} />
+            <p className={styles.title}>NEXTLINGO</p>
+            <Image src={Dog} alt="" width={180} height={180}  />
           </Fade>
         </div>
-        <div className={styles.divTitle}>
+        <div className={styles.divForget}>
           <Fade className={styles.bounce}>
             <button onClick={() => handlePopUp(true)} className={styles.button}>
               Do you forget your password?

@@ -7,17 +7,20 @@ $White: #ffffff;
 $Black: #231b1b;
 $Grey: #faf9f9;
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Murecho:wght@300&family=Trispace:wght@300&display=swap");
 
 .examples {
   font-family: "Oswald", sans-serif;
   font-family: "Roboto", sans-serif;
+  font-family: "Murecho", sans-serif;
+  font-family: "Trispace", sans-serif;
 }
 
 .main {
   width: 100%;
   height: fit-content;
   min-height: 110vh;
-  background-color: $LightBlue;
+  background-color: $Blue;
 }
 
 .sort {
@@ -40,12 +43,14 @@ $Grey: #faf9f9;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   flex-direction: column;
   width: 100%;
+  padding-top: 5rem;
 }
 
 .title {
-  font-family: "Oswald", sans-serif;
+  font-family: "Trispace", sans-serif;
   font-size: 10vh;
   margin: 0%;
   color: $Black;
@@ -61,11 +66,10 @@ $Grey: #faf9f9;
 .sortProgress {
   display: flex;
   align-items: center;
-  font-family: "Roboto", sans-serif;
+  font-family: "Trispace", sans-serif;
   justify-content: center;
   width: 100%;
-  margin-top: 2%;
-  margin-bottom: 2%;
+  margin-top: 5rem;
 }
 
 .containerGames {
@@ -73,8 +77,7 @@ $Grey: #faf9f9;
   align-items: center;
   justify-content: center;
   width: 100%;
-  margin-top: 5%;
-  margin-bottom: 5%;
+  margin-top: 5rem;
 }
 
 .success {
@@ -86,10 +89,10 @@ $Grey: #faf9f9;
 }
 
 .completed {
-  font-family: "Oswald", sans-serif;
+  font-family: "Trispace", sans-serif;
   font-size: 5vh;
   margin: 0%;
-  color: $Pink;
+  color: $LightBlue;
   text-shadow: 1px 1px $White, -1px 1px 0 $White, 1px -1px 0 $White,
     -1px -1px 0 $White, 0px 1px 0 $White, 0px -1px 0 $White, -1px 0px 0 $White,
     1px 0px 0 $White, 2px 2px 0 $White, -2px 2px 0 $White, 2px -2px 0 $White,
@@ -118,7 +121,7 @@ $Grey: #faf9f9;
   width: 70%;
   height: 3rem;
   margin-top: 10%;
-  font-family: "Roboto", sans-serif;
+  font-family: "Trispace", sans-serif;
   border-radius: 10px 10px 10px 10px;
   font-size: 3vh;
   font-weight: bold;

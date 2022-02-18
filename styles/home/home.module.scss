@@ -7,17 +7,25 @@ $White: #ffffff;
 $Black: #231b1b;
 $Grey: #faf9f9;
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Murecho:wght@300&family=Trispace:wght@300&display=swap");
+
+@font-face {
+  font-family: Meows;
+  src: url("../../fonts/Meows.ttf") format("opentype");
+}
 
 .examples {
   font-family: "Oswald", sans-serif;
   font-family: "Roboto", sans-serif;
+  font-family: "Murecho", sans-serif;
+  font-family: "Trispace", sans-serif;
 }
-
 .container {
   width: 100%;
   height: fit-content;
   min-height: 110vh;
-  background-color: $LightBlue;
+  background-color: $Blue;
+  padding-bottom: 5rem;
 }
 
 .home {
@@ -30,17 +38,17 @@ $Grey: #faf9f9;
 
 .sortTitleHome {
   display: flex;
-  align-items: center;
+  align-items:flex-end;
   justify-content: left;
   width: 100%;
-  margin-top: 3%;
-  margin-bottom: 3%;
+  margin-top: 10rem;
+  margin-bottom: 5rem;
   margin-right: 10rem;
   flex-direction: row;
 }
 
 .title {
-  font-family: "Oswald", sans-serif;
+  font-family: "Meows", sans-serif;
   font-size: 15vh;
   margin: 0%;
   color: $Black;
@@ -66,7 +74,7 @@ $Grey: #faf9f9;
   width: 70%;
   margin-top: 10%;
   height: 3rem;
-  font-family: "Roboto", sans-serif;
+  font-family: "Trispace", sans-serif;
   border-radius: 10px 10px 10px 10px;
   font-size: 3vh;
   font-weight: bold;
@@ -123,11 +131,14 @@ $Grey: #faf9f9;
 @media (max-width: 800px) {
   .sortTitleHome {
     margin-right: 0;
+    margin-top: 6rem;
+    margin-bottom: 0rem;
+    align-items: center;
     flex-direction: column;
-    margin-top: 5%;
+    justify-content: center;
   }
   .title {
-    font-size: 8vh;
+    font-size: 9vh;
   }
   .buttonNoToken {
     width: 80%;

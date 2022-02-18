@@ -41,7 +41,7 @@ const Home = () => {
           <div className={styles.home}>
             <Bounce>
               <div className={styles.sortTitleHome}>
-                <h6 className={styles.title}>NextLingo</h6>
+                <p className={styles.title}>NEXTLINGO</p>
                 <Image src={Dog} alt="" width={150} height={150} />
               </div>
             </Bounce>

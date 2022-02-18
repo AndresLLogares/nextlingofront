@@ -7,10 +7,13 @@ $White: #ffffff;
 $Black: #231b1b;
 $Grey: #faf9f9;
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Murecho:wght@300&family=Trispace:wght@300&display=swap");
 
 .examples {
   font-family: "Oswald", sans-serif;
   font-family: "Roboto", sans-serif;
+  font-family: "Murecho", sans-serif;
+  font-family: "Trispace", sans-serif;
 }
 
 .boxLogin {
@@ -36,7 +39,7 @@ $Grey: #faf9f9;
   flex-direction: column;
   width: 60%;
   border-radius: 10px 10px 10px 10px;
-  border: solid 0.2rem $Black;
+  box-shadow: 0px 2px 30px 6px rgba(0, 0, 0, 0.5);
   background-color: $Grey;
 }
 
@@ -53,7 +56,7 @@ $Grey: #faf9f9;
   margin: 0%;
   margin-bottom: 2%;
   margin-top: 2%;
-  font-family: "Oswald", sans-serif;
+  font-family: "Trispace", sans-serif;
   font-size: 6vh;
   color: $Black;
 }
@@ -73,8 +76,7 @@ $Grey: #faf9f9;
   justify-content: center;
   width: 100%;
   flex-direction: column;
-  margin-top: 2%;
-  margin-bottom: 2%;
+  margin-top: 2rem
 }
 
 .label {
@@ -85,28 +87,28 @@ $Grey: #faf9f9;
   justify-content: center;
   text-align: center;
   flex-direction: row;
-  font-family: "Roboto", sans-serif;
+  font-family: "Trispace", sans-serif;
   font-size: 2.5vh;
-  color: $Black;
+  color: $Blue;
   font-weight: bold;
-  margin-bottom: 1%;
+  margin-bottom: 1rem;
 }
 
 .icons {
-  max-width: 2rem;
-  min-width: 2rem;
-  max-height: 2rem;
-  min-height: 2rem;
+  max-width: 3rem;
+  min-width: 3rem;
+  max-height: 3rem;
+  min-height: 3rem;
   margin-right: 1%;
 }
 
 .input {
-  width: 15rem;
-  height: 2.5rem;
+  width: 25rem;
+  padding: 0.5rem;
   border-radius: 10px 10px 10px 10px;
-  border: solid 0.2rem $Black;
+  border: solid 0.2rem $Blue;
   background-color: $White;
-  font-family: "Roboto", sans-serif;
+  font-family: "Trispace", sans-serif;
   font-size: 2.5vh;
   color: $Black;
   font-weight: bold;
@@ -117,21 +119,20 @@ $Grey: #faf9f9;
   align-items: center;
   justify-content: center;
   width: 100%;
-  margin-top: 2%;
+  margin-top: 5rem;
 }
 
 .button {
-  width: 30%;
-  margin: 2%;
+  width: 20rem;
   height: 3rem;
-  font-family: "Roboto", sans-serif;
+  font-family: "Trispace", sans-serif;
   border-radius: 10px 10px 10px 10px;
   font-size: 3vh;
   font-weight: bold;
   border: transparent;
   position: relative;
-  color: $Black;
-  background-color: $LightBlue;
+  color: $White;
+  background-color: $Blue;
   z-index: 2;
   line-height: 40px;
   padding: 0;
@@ -148,7 +149,7 @@ $Grey: #faf9f9;
   content: "";
   width: 0%;
   height: 0%;
-  border: 0.1rem solid;
+  border: 0.2rem solid;
   z-index: -1;
   transition: all 0.3s ease;
 }
@@ -184,11 +185,10 @@ $Grey: #faf9f9;
   justify-content: center;
   width: fit-content;
   padding: 1%;
-  margin-top: 0%;
-  margin-bottom: 5%;
+  margin-bottom: 5rem;
   font-weight: bold;
   border-radius: 10px 10px 10px 10px;
-  border: solid 0.2rem $Black;
+  border: solid 0.2rem $Blue;
   background-color: $LightBlue;
   &:hover {
     cursor: url(../../images/pointer.png), default;
@@ -207,13 +207,14 @@ $Grey: #faf9f9;
   background-color: $Grey;
   flex-direction: column;
   border-radius: 10px 10px 10px 10px;
-  border: solid 0.2rem $Black;
+  box-shadow: 0px 2px 30px 6px rgba(0, 0, 0, 0.5);
 }
 
 .sortPopUp {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   flex-direction: column;
   margin-top: 2%;
   margin-bottom: 2%;
@@ -221,8 +222,8 @@ $Grey: #faf9f9;
 }
 
 .titlePopUp {
-  font-family: "Oswald", sans-serif;
-  font-size: 3vh;
+  font-family: "Trispace", sans-serif;
+  font-size: 4vh;
   color: $Black;
   font-weight: bold;
   margin: 0;
@@ -233,14 +234,14 @@ $Grey: #faf9f9;
 .buttonPopUp {
   width: 80%;
   margin: 2%;
-  font-family: "Roboto", sans-serif;
+  font-family: "Trispace", sans-serif;
   border-radius: 10px 10px 10px 10px;
   font-size: 3vh;
   font-weight: bold;
   border: transparent;
   position: relative;
-  color: $Black;
-  background-color: $LightBlue;
+  color: $White;
+  background-color: $Blue;
   z-index: 2;
   line-height: 40px;
   padding: 0;
@@ -257,7 +258,7 @@ $Grey: #faf9f9;
   content: "";
   width: 0%;
   height: 0%;
-  border: 0.1rem solid;
+  border: 0.2rem solid;
   z-index: -1;
   transition: all 0.3s ease;
 }
@@ -299,13 +300,13 @@ $Grey: #faf9f9;
   align-items: center;
   justify-content: center;
   width: 20%;
-  background-color: $LightBlue;
   border-radius: 10px 10px 10px 10px;
-  border: 0.2rem $Black solid;
+  border: transparent;
+  background-color: $Grey;
   margin: 2%;
   &:hover {
     cursor: url(../../images/pointer.png), default;
-    opacity: 0.7;
+    background-color: $LightBlue;
   }
 }
 
@@ -376,7 +377,12 @@ $Grey: #faf9f9;
     width: 50%;
   }
 
+  .input {
+    width: 15rem;
+    font-size: 2vh;
+  }
+
   .sortFormReset {
-  width: 90%;
+    width: 90%;
   }
 }
