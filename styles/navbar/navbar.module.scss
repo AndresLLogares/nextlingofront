@@ -75,6 +75,9 @@ $Grey: #faf9f9;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+  border-radius: 10px 10px 10px 10px;
+  box-shadow: 0px 2px 20px 6px rgba(0, 0, 0, 0.5);
   margin-bottom: 3rem;
 }
 
@@ -166,6 +169,7 @@ $Grey: #faf9f9;
 @media (max-width: 800px) {
   .container {
     z-index: 10;
+    border: none;
     width: 100%;
     animation-duration: 1s;
     animation-name: bounceInLeft;
@@ -190,6 +194,7 @@ $Grey: #faf9f9;
   .none {
     z-index: 10;
     width: 100%;
+    border: none;
     animation-duration: 1s;
     animation-name: bounceOutLeft;
     transform: translateX(-2000px);
