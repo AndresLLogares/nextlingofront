@@ -73,7 +73,7 @@ const NavBar = () => {
         <Bounce className={styles.bounce}>
           <div className={styles.sortProfile}>
             {user?.photo_profile ? (
-              <Image src={user.photo_profile} alt="" width={100} height={100} />
+              <Image src={user.photo_profile} alt="" width={200} height={200} />
             ) : (
               <Image src={NoUser} alt="" width={200} height={200} />
             )}
